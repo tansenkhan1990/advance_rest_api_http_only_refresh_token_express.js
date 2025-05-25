@@ -10,6 +10,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
+// ✅ Restrict access to only localhost:4000
 app.use(cors({ origin: "http://localhost:4000", credentials: true }));
 
 // Routes
